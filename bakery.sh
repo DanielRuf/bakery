@@ -1,3 +1,5 @@
+#!/bin/bash
+
 BAKERY_DIRECTORY="bakery"
 BROTLI_DOWNLOAD="https://dl.bintray.com/eustas/brotli/brotli-linux-2018-11-12.zip"
 
@@ -13,5 +15,10 @@ if [ ! -f "$BAKERY_DIRECTORY/brotli" ]; then
   unzip brotli.zip -d $BAKERY_DIRECTORY
   rm brotli.zip
 fi
+
+for f in $1/*.{css,js}
+do
+  echo "Processing $f file..."
+done
 
 echo "Done"
