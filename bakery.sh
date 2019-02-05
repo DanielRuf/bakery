@@ -17,12 +17,18 @@ BROTLI_DOWNLOAD="https://dl.bintray.com/eustas/brotli/brotli-linux-2018-11-12.zi
     rm brotli.zip
   fi
 
-fi
+  for f in $1/*.{css,js}
+  do
+    echo "Processing $f file..."
+    $BAKERY_DIRECTORY/brotli -5 $f
+  done
 
-for f in $1/*.{css,js}
-do
-  echo "Processing $f file..."
-  brotli -5 $f
-done
+else
+  for f in $1/*.{css,js}
+  do
+    echo "Processing $f file..."
+    brotli -5 $f
+  done
+fi
 
 echo "Done"
