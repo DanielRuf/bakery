@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if ! [ -x "$(command -v brotli)" ]; then
-BAKERY_DIRECTORY="bakery"
-BROTLI_DOWNLOAD="https://dl.bintray.com/eustas/brotli/brotli-linux-2018-11-12.zip"
+  BAKERY_DIRECTORY="bakery"
+  BROTLI_DOWNLOAD="https://dl.bintray.com/eustas/brotli/brotli-linux-2018-11-12.zip"
 
   # create bakery directory if it does not exist
   if [ ! -d "$BAKERY_DIRECTORY" ]; then
